@@ -18,9 +18,12 @@ The repo includes the following files:
 Usage of the files:
 ====
 1.  The original dataset at this link should be downloaded and unzipped to the local computer: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-2.  Launch your R environment and set the directory containing the unzipped data to your R working directory.
+
+2.  Launch your R environment and set the R working directory to inside the 'UCI HAR Dataset' folder of the unzipped file.
+
 3.  Install the required package:
   * reshape2
+
 4. Source the 'run_analysis' script to generate the resulting tidy data set.
 
 License:
