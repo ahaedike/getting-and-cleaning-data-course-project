@@ -20,7 +20,6 @@ tbl_both <- rbind(tbl_train, tbl_test)
 
 columns_of_interest <- c(grep("mean\\(\\)|std\\(\\)", tbl_features$V2, value = TRUE), "subject", "activity")
 tbl_mean_std <- tbl_both[,columns_of_interest]
-
 ## 3. Use descriptive activity names to name the activities in the data set
 ##    load lookup table from activity_labels.txt to remap the 'activity' label column
 tbl_activity_lookup <- read.table("activity_labels.txt", sep = "",header = FALSE)

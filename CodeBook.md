@@ -43,8 +43,8 @@ The following files are available for the train and test data. Their description
   * For the **test** data, combine (column bind) data ("train/X_test.txt"), activity ("train/y_test.txt"), and subject ("train/subject_test.txt") into one data frame.
   * Combine (row bind) the training and test data frames into one data frame.
 2. Extract the 'mean' and 'standard deviation' columns using a **regex** match of all variable names containing **mean()** or **std()**
-3. The same column names were kept from the original data sets because they are already descriptive.  
-  * The **codebook** of column definitions can be found in the original data set file **features.txt** and **features_info.txt**.
+3. The same variable names were kept from the original data sets because they are already descriptive.  
+  * The **codebook** of variable definitions can be found in the original data set file **features.txt** and **features_info.txt**.
   * For example: **'tBodyAcc-std()-X'** is the variable containing the standard deviation in the X axis for the accelerometer measurement.
   * For example: **'tBodyAcc-mean()-Z'** is the variable containing the mean in the Z axis for the accelerometer measurement.
   * This convention is consistent for all variables.
@@ -53,3 +53,11 @@ The following files are available for the train and test data. Their description
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   * **melt** and **dcast** were used to reshape the data
 6.  Output the new tidy data set using 'write.table'
+
+## Codebook of resulting columns
+---
+The resulting tidy data set contains four columns:
+1.  "subject":  Test test subject performing the activity.
+2.  "activity": Textual description of the activity performed at time of measurement.
+3.  "variable":  The name of the original measurement
+4.  "value":  The mean of the mean or standard deviation for the variable.
